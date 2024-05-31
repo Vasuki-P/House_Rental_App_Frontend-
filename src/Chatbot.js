@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
+import Footer from './Footer';
 
 const theme = {
     background: '#f5f8fb',
@@ -125,7 +126,7 @@ const steps = [
 
 const Chatbot = () => {
     return (
-        <div className='chatbot'>
+        <div className='chatbot' style={{ backgroundImage: 'url("img.jpg")' }}>
             <header className='header'>
                 <div className="logo">
                     <img src="logo.jpg" alt="Logo" />
@@ -147,6 +148,7 @@ const Chatbot = () => {
                     <ChatBot steps={steps} />
                 </ThemeProvider>
             </div>
+            <Footer />
         </div>
     );
 };
